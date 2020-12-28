@@ -20,19 +20,25 @@ extension UIImageView {
         }
         
         guard let url = URL(string: urlString) else {
-            self.image = defaultImage
+            DispatchQueue.main.async {
+                self.image = defaultImage
+            }
             return
         }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print("Couldn't download image: ", error)
-                self.image = defaultImage
+                DispatchQueue.main.async {
+                    self.image = defaultImage
+                }
                 return
             }
             
             guard let data = data,
                 let image = UIImage(data: data) else {
-                    self.image = defaultImage
+                    DispatchQueue.main.async {
+                        self.image = defaultImage
+                    }
                     return
             }
             imageCache.setObject(image, forKey: urlString as AnyObject)
