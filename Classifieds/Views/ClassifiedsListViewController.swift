@@ -19,13 +19,12 @@ class ClassifiedsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupView()
         observeModel()
     }
     
     private func setupView() {
-        self.title = "Classifieds"
+        self.title = NSLocalizedString("Listing.title", comment: "Title of Classified list title")
     }
     
     private func observeModel() {

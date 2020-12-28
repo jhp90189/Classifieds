@@ -14,15 +14,14 @@ private let defaultImage = UIImage(named: "placeholder")
 
 extension UIImageView {
     func loadImage(urlString: String) {
+        self.image = defaultImage
         if let cacheImage = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
             self.image = cacheImage
             return
         }
         
         guard let url = URL(string: urlString) else {
-            DispatchQueue.main.async {
-                self.image = defaultImage
-            }
+            self.image = defaultImage
             return
         }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -46,6 +45,5 @@ extension UIImageView {
                 self.image = image
             }
         }.resume()
-        
     }
 }
