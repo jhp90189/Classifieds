@@ -24,7 +24,7 @@ class ClassifiedsListViewController: UIViewController {
     }
     
     private func setupView() {
-        self.title = NSLocalizedString("Listing.title", comment: "Title of Classified list title")
+        self.title = NSLocalizedString("Listing_title", comment: "Title of Classified list title")
     }
     
     private func observeModel() {

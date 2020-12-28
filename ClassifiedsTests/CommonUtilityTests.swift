@@ -14,7 +14,7 @@ class CommonUtilityTests: XCTestCase {
     func testDateFormater() {
         let dateString = "2019-01-04 04:04:17.566515"
         let date = dateString.convertToDate()
-        XCTAssertTrue(date == "04 January 2019, 04:04 am")
+        XCTAssertTrue(date == "4 Jan 2019, 04:04 AM")
     }
     
     func testImageLoading() {
