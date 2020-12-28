@@ -11,8 +11,10 @@ import UIKit
 class ClassifiedsListViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
-
+    
     private var classifiedsList: [Classified] = []
+    private var selectedClassified: Classified? = nil
+    private let detailSegueIdentifier = "toclassifieddetail"
     var viewModel: ClassifiedsListViewModel?
     
     override func viewDidLoad() {
@@ -35,6 +37,13 @@ class ClassifiedsListViewController: UIViewController {
         }
         viewModel?.callApiToFetchCurrencyList()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == detailSegueIdentifier {
+            let listViewController = segue.destination as? ClassifiedDetailViewController
+            listViewController?.classified = selectedClassified
+        }
+    }
 }
 
 extension ClassifiedsListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -52,5 +61,7 @@ extension ClassifiedsListViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedClassified = classifiedsList[indexPath.row]
+        performSegue(withIdentifier: detailSegueIdentifier, sender: nil)
     }
 }

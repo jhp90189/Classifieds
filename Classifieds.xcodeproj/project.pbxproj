@@ -21,6 +21,7 @@
 		184EAD292599C965006E3A86 /* ClassifiedsListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD282599C964006E3A86 /* ClassifiedsListResponse.swift */; };
 		184EAD2C2599CF3C006E3A86 /* ClassifiedsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD2B2599CF3C006E3A86 /* ClassifiedsListViewModel.swift */; };
 		184EAD2F2599DA47006E3A86 /* ClassifiedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD2E2599DA47006E3A86 /* ClassifiedCell.swift */; };
+		184EAD312599EB44006E3A86 /* ClassifiedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD302599EB43006E3A86 /* ClassifiedDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		184EAD282599C964006E3A86 /* ClassifiedsListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedsListResponse.swift; sourceTree = "<group>"; };
 		184EAD2B2599CF3C006E3A86 /* ClassifiedsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedsListViewModel.swift; sourceTree = "<group>"; };
 		184EAD2E2599DA47006E3A86 /* ClassifiedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedCell.swift; sourceTree = "<group>"; };
+		184EAD302599EB43006E3A86 /* ClassifiedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				184EACF92599BF7D006E3A86 /* ClassifiedsListViewController.swift */,
+				184EAD302599EB43006E3A86 /* ClassifiedDetailViewController.swift */,
 				184EAD2D2599D99C006E3A86 /* CustomCell */,
 			);
 			path = Views;
@@ -276,6 +279,7 @@
 				184EAD2C2599CF3C006E3A86 /* ClassifiedsListViewModel.swift in Sources */,
 				184EAD002599BF7D006E3A86 /* Classifieds.xcdatamodeld in Sources */,
 				184EAD2F2599DA47006E3A86 /* ClassifiedCell.swift in Sources */,
+				184EAD312599EB44006E3A86 /* ClassifiedDetailViewController.swift in Sources */,
 				184EAD292599C965006E3A86 /* ClassifiedsListResponse.swift in Sources */,
 				184EACF82599BF7D006E3A86 /* SceneDelegate.swift in Sources */,
 				184EAD262599C5E7006E3A86 /* APIClient.swift in Sources */,
