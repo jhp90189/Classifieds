@@ -24,6 +24,7 @@
 		184EAD312599EB44006E3A86 /* ClassifiedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD302599EB43006E3A86 /* ClassifiedDetailViewController.swift */; };
 		184EAD33259A0188006E3A86 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD32259A0188006E3A86 /* String+DateFormatter.swift */; };
 		184EAD36259A0C4C006E3A86 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD35259A0C4C006E3A86 /* UIImageView+Cache.swift */; };
+		184EAD38259A2D25006E3A86 /* classifieds_invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 184EAD37259A2D25006E3A86 /* classifieds_invalid.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		184EAD302599EB43006E3A86 /* ClassifiedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedDetailViewController.swift; sourceTree = "<group>"; };
 		184EAD32259A0188006E3A86 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
 		184EAD35259A0C4C006E3A86 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
+		184EAD37259A2D25006E3A86 /* classifieds_invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = classifieds_invalid.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				184EAD1F2599C5E6006E3A86 /* classifieds.json */,
+				184EAD37259A2D25006E3A86 /* classifieds_invalid.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				184EAD052599BF85006E3A86 /* LaunchScreen.storyboard in Resources */,
 				184EAD022599BF85006E3A86 /* Assets.xcassets in Resources */,
 				184EACFD2599BF7D006E3A86 /* Main.storyboard in Resources */,
+				184EAD38259A2D25006E3A86 /* classifieds_invalid.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

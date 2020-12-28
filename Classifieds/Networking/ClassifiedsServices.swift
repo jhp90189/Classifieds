@@ -18,15 +18,9 @@ class ClassifiedsServices {
     private let shouldUseStubData = true
     
     //API call to fetch list of employees
-    func fetchClassifiedsList(completion: @escaping ((Result<ClassifiedsListResponse>) -> Void)) {
-        if shouldUseStubData {
-            do {
-                if let filePath = Bundle.main.path(forResource: "classifieds", ofType: "json") {
-                    let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
-                    let items = try JSONDecoder().decode(ClassifiedsListResponse.self, from: data)
-                    completion(.success(items))
-                }
-            } catch {}
+    func fetchClassifiedsList(mockFileName: String? = nil, completion: @escaping ((Result<ClassifiedsListResponse>) -> Void)) {
+        if let mockFile = mockFileName {
+            fetchClassifiedsUsingMock(completion: completion, mockFileName: mockFile)
         } else {
             guard let classifiedURL = URL(string: getClassifiedsListURL) else { return }
             let resourse = Resource(url: classifiedURL)
@@ -44,6 +38,18 @@ class ClassifiedsServices {
                     completion(.failure(error))
                 }
             }
+        }
+    }
+    
+    private func fetchClassifiedsUsingMock(completion: @escaping ((Result<ClassifiedsListResponse>) -> Void), mockFileName: String) {
+        do {
+            if let filePath = Bundle.main.path(forResource: mockFileName, ofType: "json") {
+                let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
+                let items = try JSONDecoder().decode(ClassifiedsListResponse.self, from: data)
+                completion(.success(items))
+            }
+        } catch {
+            completion(.failure(error))
         }
     }
 }
