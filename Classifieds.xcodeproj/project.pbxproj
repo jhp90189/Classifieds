@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		184EACF62599BF7D006E3A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EACF52599BF7D006E3A86 /* AppDelegate.swift */; };
 		184EACF82599BF7D006E3A86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EACF72599BF7D006E3A86 /* SceneDelegate.swift */; };
-		184EACFA2599BF7D006E3A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EACF92599BF7D006E3A86 /* ViewController.swift */; };
+		184EACFA2599BF7D006E3A86 /* ClassifiedsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EACF92599BF7D006E3A86 /* ClassifiedsListViewController.swift */; };
 		184EACFD2599BF7D006E3A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184EACFB2599BF7D006E3A86 /* Main.storyboard */; };
 		184EAD002599BF7D006E3A86 /* Classifieds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 184EACFE2599BF7D006E3A86 /* Classifieds.xcdatamodeld */; };
 		184EAD022599BF85006E3A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184EAD012599BF85006E3A86 /* Assets.xcassets */; };
 		184EAD052599BF85006E3A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184EAD032599BF85006E3A86 /* LaunchScreen.storyboard */; };
 		184EAD102599BF85006E3A86 /* ClassifiedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD0F2599BF85006E3A86 /* ClassifiedsTests.swift */; };
+		184EAD232599C5E7006E3A86 /* classifieds.json in Resources */ = {isa = PBXBuildFile; fileRef = 184EAD1F2599C5E6006E3A86 /* classifieds.json */; };
+		184EAD252599C5E7006E3A86 /* ClassifiedsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD212599C5E6006E3A86 /* ClassifiedsServices.swift */; };
+		184EAD262599C5E7006E3A86 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD222599C5E6006E3A86 /* APIClient.swift */; };
+		184EAD292599C965006E3A86 /* ClassifiedsListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD282599C964006E3A86 /* ClassifiedsListResponse.swift */; };
+		184EAD2C2599CF3C006E3A86 /* ClassifiedsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD2B2599CF3C006E3A86 /* ClassifiedsListViewModel.swift */; };
+		184EAD2F2599DA47006E3A86 /* ClassifiedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EAD2E2599DA47006E3A86 /* ClassifiedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +37,7 @@
 		184EACF22599BF7C006E3A86 /* Classifieds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Classifieds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184EACF52599BF7D006E3A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184EACF72599BF7D006E3A86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		184EACF92599BF7D006E3A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		184EACF92599BF7D006E3A86 /* ClassifiedsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedsListViewController.swift; sourceTree = "<group>"; };
 		184EACFC2599BF7D006E3A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		184EACFF2599BF7D006E3A86 /* Classifieds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Classifieds.xcdatamodel; sourceTree = "<group>"; };
 		184EAD012599BF85006E3A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +46,12 @@
 		184EAD0B2599BF85006E3A86 /* ClassifiedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassifiedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184EAD0F2599BF85006E3A86 /* ClassifiedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedsTests.swift; sourceTree = "<group>"; };
 		184EAD112599BF85006E3A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184EAD1F2599C5E6006E3A86 /* classifieds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = classifieds.json; sourceTree = "<group>"; };
+		184EAD212599C5E6006E3A86 /* ClassifiedsServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifiedsServices.swift; sourceTree = "<group>"; };
+		184EAD222599C5E6006E3A86 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		184EAD282599C964006E3A86 /* ClassifiedsListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedsListResponse.swift; sourceTree = "<group>"; };
+		184EAD2B2599CF3C006E3A86 /* ClassifiedsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedsListViewModel.swift; sourceTree = "<group>"; };
+		184EAD2E2599DA47006E3A86 /* ClassifiedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +95,10 @@
 			children = (
 				184EACF52599BF7D006E3A86 /* AppDelegate.swift */,
 				184EACF72599BF7D006E3A86 /* SceneDelegate.swift */,
-				184EACF92599BF7D006E3A86 /* ViewController.swift */,
+				184EAD2A2599CEA1006E3A86 /* ViewModel */,
+				184EAD272599C86A006E3A86 /* Models */,
+				184EAD1D2599C5E6006E3A86 /* Networking */,
+				184EAD1A2599C3E5006E3A86 /* Views */,
 				184EACFB2599BF7D006E3A86 /* Main.storyboard */,
 				184EAD012599BF85006E3A86 /* Assets.xcassets */,
 				184EAD032599BF85006E3A86 /* LaunchScreen.storyboard */,
@@ -100,6 +115,57 @@
 				184EAD112599BF85006E3A86 /* Info.plist */,
 			);
 			path = ClassifiedsTests;
+			sourceTree = "<group>";
+		};
+		184EAD1A2599C3E5006E3A86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				184EACF92599BF7D006E3A86 /* ClassifiedsListViewController.swift */,
+				184EAD2D2599D99C006E3A86 /* CustomCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		184EAD1D2599C5E6006E3A86 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				184EAD1E2599C5E6006E3A86 /* Stubs */,
+				184EAD212599C5E6006E3A86 /* ClassifiedsServices.swift */,
+				184EAD222599C5E6006E3A86 /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		184EAD1E2599C5E6006E3A86 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				184EAD1F2599C5E6006E3A86 /* classifieds.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		184EAD272599C86A006E3A86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				184EAD282599C964006E3A86 /* ClassifiedsListResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		184EAD2A2599CEA1006E3A86 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				184EAD2B2599CF3C006E3A86 /* ClassifiedsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		184EAD2D2599D99C006E3A86 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				184EAD2E2599DA47006E3A86 /* ClassifiedCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184EAD232599C5E7006E3A86 /* classifieds.json in Resources */,
 				184EAD052599BF85006E3A86 /* LaunchScreen.storyboard in Resources */,
 				184EAD022599BF85006E3A86 /* Assets.xcassets in Resources */,
 				184EACFD2599BF7D006E3A86 /* Main.storyboard in Resources */,
@@ -203,10 +270,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184EACFA2599BF7D006E3A86 /* ViewController.swift in Sources */,
+				184EAD252599C5E7006E3A86 /* ClassifiedsServices.swift in Sources */,
+				184EACFA2599BF7D006E3A86 /* ClassifiedsListViewController.swift in Sources */,
 				184EACF62599BF7D006E3A86 /* AppDelegate.swift in Sources */,
+				184EAD2C2599CF3C006E3A86 /* ClassifiedsListViewModel.swift in Sources */,
 				184EAD002599BF7D006E3A86 /* Classifieds.xcdatamodeld in Sources */,
+				184EAD2F2599DA47006E3A86 /* ClassifiedCell.swift in Sources */,
+				184EAD292599C965006E3A86 /* ClassifiedsListResponse.swift in Sources */,
 				184EACF82599BF7D006E3A86 /* SceneDelegate.swift in Sources */,
+				184EAD262599C5E7006E3A86 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
