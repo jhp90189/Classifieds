@@ -25,5 +25,6 @@ class ClassifiedDetailViewController: UIViewController {
         self.title = classified?.name
         labelPrice.text = classified?.price
         labelCreatedDate.text = classified?.created_at.convertToDate()
+        detailImageView.loadImage(urlString: classified?.image_urls.first ?? "")
     }
 }

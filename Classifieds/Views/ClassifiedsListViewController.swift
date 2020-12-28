@@ -57,6 +57,7 @@ extension ClassifiedsListViewController: UITableViewDataSource, UITableViewDeleg
         let classified = classifiedsList[indexPath.row]
         cell.labelName.text = classified.name
         cell.labelPrice.text = classified.price
+        cell.classifiedImage.loadImage(urlString: classified.image_urls_thumbnails.first ?? "")
         return cell
     }
     
