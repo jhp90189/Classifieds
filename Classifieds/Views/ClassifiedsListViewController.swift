@@ -15,7 +15,7 @@ class ClassifiedsListViewController: UIViewController {
     private var classifiedsList: [Classified] = []
     private var selectedClassified: Classified? = nil
     private let detailSegueIdentifier = "toclassifieddetail"
-    var viewModel: ClassifiedsListViewModel?
+    var viewModel = ClassifiedsListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ class ClassifiedsListViewController: UIViewController {
     
     private func observeModel() {
         activityIndicator.startAnimating()
-        viewModel?.bindClassifiedList = { [weak self] list in
+        viewModel.bindClassifiedList = { [weak self] list in
             self?.activityIndicator.stopAnimating()
             self?.classifiedsList = list
             self?.tableView.reloadData()
         }
-        viewModel?.callApiToFetchCurrencyList()
+        viewModel.callApiToFetchCurrencyList()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

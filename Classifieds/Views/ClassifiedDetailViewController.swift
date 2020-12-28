@@ -24,6 +24,6 @@ class ClassifiedDetailViewController: UIViewController {
     private func setupView() {
         self.title = classified?.name
         labelPrice.text = classified?.price
-        labelCreatedDate.text = classified?.created_at
+        labelCreatedDate.text = classified?.created_at.convertToDate()
     }
 }
